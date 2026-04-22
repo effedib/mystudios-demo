@@ -28,11 +28,11 @@ Importa la repo, imposta il runtime **Node 22** nel progetto se non lo rileva da
 
 Password per tutti gli account: **`demo`**
 
-| Profilo        | Email                  | Note                    |
-| -------------- | ---------------------- | ----------------------- |
-| Cliente Alpha  | `cliente.alpha@demo.it` | Azienda Alpha S.r.l.    |
-| Cliente Beta   | `cliente.beta@demo.it`  | Beta Consulting S.p.A.  |
-| Backoffice     | `studio@demo.it`        | Pannello Studio         |
+| Profilo       | Email                   | Note                   |
+| ------------- | ----------------------- | ---------------------- |
+| Cliente Alpha | `cliente.alpha@demo.it` | Azienda Alpha S.r.l.   |
+| Cliente Beta  | `cliente.beta@demo.it`  | Beta Consulting S.p.A. |
+| Backoffice    | `studio@demo.it`        | Pannello Studio        |
 
 - Area cliente: [`/c/dashboard`](./src/app/c/dashboard) (dopo login).
 - Backoffice: [`/studio`](./src/app/studio).
@@ -46,5 +46,3 @@ Password per tutti gli account: **`demo`**
 ## Limiti
 
 Nessun parsing Excel reale, nessun calcolo lato server, nessuna sicurezza sull’autenticazione (cookie demo, middleware solo per percorso).
-
-Palette e tipografia in [`src/app/globals.css`](src/app/globals.css) ispirata a [Studio Scuderi](https://studiomarioscuderi.com/) (marchi e testi ufficiali restano del titolare).
