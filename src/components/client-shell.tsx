@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoutButton } from "@/components/logout-button";
@@ -25,10 +26,15 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-0 min-h-svh w-full">
       <aside className="flex w-64 shrink-0 flex-col border-r border-sidebar-border bg-sidebar text-sidebar-foreground">
-        <div className="flex h-16 items-center gap-2 border-b border-sidebar-border px-4">
-          <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-bold">
-            MS
-          </div>
+        <div className="flex h-16 items-center gap-2 border-b border-sidebar-border px-3">
+          <Image
+            src="/brand/logo-ms.png"
+            alt="My Studio MS"
+            width={320}
+            height={190}
+            className="h-9 w-auto max-w-[140px] shrink-0 object-contain object-left"
+            priority
+          />
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold">My Studio MS</p>
             <p className="truncate text-xs text-sidebar-foreground/80">Portale clienti</p>
@@ -56,7 +62,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
                 className={cn(
                   "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors",
                   active
-                    ? "bg-sidebar-primary text-primary-foreground"
+                    ? "bg-sidebar-primary text-sidebar-primary-foreground"
                     : "text-sidebar-foreground/90 hover:bg-sidebar-accent/60"
                 )}
               >

@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Favicon: convenzione file src/app/icon.png
 export const metadata: Metadata = {
   title: "My Studio MS | Portale clienti",
   description:

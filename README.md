@@ -2,6 +2,8 @@
 
 Applicazione **Next.js** solo frontend per mostrare il portale clienti e il backoffice di uno studio commercialistico. Dati, autenticazione e file sono **fittizi** (nessun backend).
 
+Il repo include lo `logo-ms.png` in `public/brand/` (logo ufficiale in PNG).
+
 ## Requisiti
 
 - **Node.js 22** (vedi [`.nvmrc`](.nvmrc) e `engines` in `package.json`). In WSL, usa `nvm use` o il Node di sistema, non quello in bundle con l’editor se diverso.

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,15 @@ export function LoginForm() {
   }
 
   return (
-    <div className="flex min-h-[80vh] items-center justify-center p-4">
+    <div className="flex min-h-[80vh] flex-col items-center justify-center p-4">
+      <Image
+        src="/brand/logo-ms.png"
+        alt="My Studio MS"
+        width={320}
+        height={190}
+        className="mb-6 h-20 w-auto max-w-[280px] object-contain"
+        priority
+      />
       <Card className="w-full max-w-md border-border/80 shadow-md">
         <CardHeader>
           <CardTitle className="text-2xl">My Studio MS</CardTitle>

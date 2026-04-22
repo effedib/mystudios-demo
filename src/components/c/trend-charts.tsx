@@ -59,7 +59,7 @@ export function TrendCharts({ data, periodLabel }: Props) {
                   <Line
                     type="monotone"
                     dataKey="ricavi"
-                    stroke="hsl(222 50% 45%)"
+                    stroke="var(--chart-1)"
                     name="Ricavi"
                     strokeWidth={2}
                     dot={false}
@@ -67,7 +67,7 @@ export function TrendCharts({ data, periodLabel }: Props) {
                   <Line
                     type="monotone"
                     dataKey="ebitda"
-                    stroke="hsl(43 70% 45%)"
+                    stroke="var(--chart-2)"
                     name="EBITDA"
                     strokeWidth={2}
                     dot={false}
@@ -89,8 +89,8 @@ export function TrendCharts({ data, periodLabel }: Props) {
                       return formatEuro(Number.isFinite(n) ? n : 0);
                     }}
                   />
-                  <Bar dataKey="ricavi" fill="hsl(222 50% 45%)" name="Ricavi" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="ebitda" fill="hsl(43 70% 45%)" name="EBITDA" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="ricavi" fill="var(--chart-1)" name="Ricavi" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="ebitda" fill="var(--chart-2)" name="EBITDA" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
