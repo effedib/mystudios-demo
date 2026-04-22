@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Studio MS (demo)
 
-## Getting Started
+Applicazione **Next.js** solo frontend per mostrare il portale clienti e il backoffice di uno studio commercialistico. Dati, autenticazione e file sono **fittizi** (nessun backend).
 
-First, run the development server:
+## Requisiti
+
+- **Node.js 22** (vedi [`.nvmrc`](.nvmrc) e `engines` in `package.json`). In WSL, usa `nvm use` o il Node di sistema, non quello in bundle con l’editor se diverso.
+
+## Comandi
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build di produzione (come su Vercel):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy (Vercel)
 
-## Learn More
+Importa la repo, imposta il runtime **Node 22** nel progetto se non lo rileva da `package.json` / Vercel defaults.
 
-To learn more about Next.js, take a look at the following resources:
+## Accesso demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Password per tutti gli account: **`demo`**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Profilo        | Email                  | Note                    |
+| -------------- | ---------------------- | ----------------------- |
+| Cliente Alpha  | `cliente.alpha@demo.it` | Azienda Alpha S.r.l.    |
+| Cliente Beta   | `cliente.beta@demo.it`  | Beta Consulting S.p.A.  |
+| Backoffice     | `studio@demo.it`        | Pannello Studio         |
 
-## Deploy on Vercel
+- Area cliente: [`/c/dashboard`](./src/app/c/dashboard) (dopo login).
+- Backoffice: [`/studio`](./src/app/studio).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contenuto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Dashboard KPI, grafici (Recharts), filtri periodo/centro, export su file in [`public/mocks/`](public/mocks).
+- Conto economico analitica, documenti, scadenze fiscali (calendario + `.ics` generato in browser).
+- Backoffice: riepilogo, clienti/utenti, caricamenti (simulazione upload, stato in memoria per sessione).
+
+## Limiti
+
+Nessun parsing Excel reale, nessun calcolo lato server, nessuna sicurezza sull’autenticazione (cookie demo, middleware solo per percorso).
+
+Palette e tipografia in [`src/app/globals.css`](src/app/globals.css) ispirata a [Studio Scuderi](https://studiomarioscuderi.com/) (marchi e testi ufficiali restano del titolare).
