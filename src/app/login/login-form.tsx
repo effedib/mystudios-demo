@@ -50,20 +50,25 @@ export function LoginForm() {
 
   return (
     <div className="flex min-h-[80vh] flex-col items-center justify-center p-4">
-      <Image
-        src="/brand/logo-ms.png"
-        alt="My Studio MS"
-        width={320}
-        height={190}
-        className="mb-6 h-20 w-auto max-w-[280px] object-contain"
-        priority
-      />
-      <Card className="w-full max-w-md border-border/80 shadow-md">
-        <CardHeader>
-          <CardTitle className="text-2xl">My Studio MS</CardTitle>
-          <CardDescription>
-            Accesso demo: dati fittizi, solo per presentare l&apos;esperienza del portale.
-          </CardDescription>
+      <Card className="w-full max-w-md border-border/80 bg-card shadow-md">
+        <CardHeader className="space-y-3 text-center">
+          <div className="flex justify-center">
+            <Image
+              src="/brand/logo-ms.png"
+              alt="My Studio MS"
+              width={3330}
+              height={1259}
+              className="h-16 w-auto max-w-[min(100%,18rem)] object-contain sm:h-[4.5rem]"
+              priority
+            />
+          </div>
+          <div className="space-y-1.5">
+            <CardTitle className="text-2xl">My Studio MS</CardTitle>
+            <CardDescription>
+              Accesso demo: dati fittizi, solo per presentare l&apos;esperienza del
+              portale.
+            </CardDescription>
+          </div>
         </CardHeader>
         <CardContent>
           <form onSubmit={onSubmit} className="space-y-4">
